@@ -1,2 +1,17 @@
 ---
-# tasks file for couchdb-replication
+- name: write the json payload
+  with_items: reps
+  template: >
+    src=replication.json.j2
+    dest=/tmp/{{item.id}}.json
+    
+- name: setting up replication
+  with_items: reps
+  uri:
+    url: '{{item.target}}/_replicate' 
+    method: POST
+    HEADER_Content-Type : "application/json"
+    body: "{{lookup('file', '/tmp/' + item.id + '.json')}}"
+    status_code: 200,202
+    timeout: 600
+    
