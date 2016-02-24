@@ -1,6 +1,6 @@
 ---
-- name: setting up replication
-  with_items: reps
+- name: setting up replications...
+  with_items: couchdb_reps
   uri:
     url: '{{item.target}}/_replicate' 
     method: POST
