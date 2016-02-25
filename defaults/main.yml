@@ -2,10 +2,9 @@
 # defaults file for couchdb-replication
 couchdb_reps:
   - id: '4fc99092-7da5-11e5-9715-8851fb63ec99'
-    source: 'http://upstream.couchdb:5984'
-    target: 'http://target.couchdb:5984'
-    db : 'couchdb-db1'
+    source: 'http://upstream.couchdb:5984/couchdb-db1'
+    target: 'couchdb-db1'
   - id: 'c9a66cbe-7da5-11e5-b21f-8851fb63ec99'
-    source: 'http://upstream.couchdb:5984'
-    target: 'http://target.couchdb:5984'
-    db : 'couchdb-db2'
+    source: 'http://upstream.couchdb:5984/couchdb-db2'
+    target: 'couchdb-db2'
+
