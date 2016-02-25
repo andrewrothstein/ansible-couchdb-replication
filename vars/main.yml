@@ -1,2 +1,5 @@
 ---
 # vars file for couchdb-replication
+couchdb_endpoint : '{{inventory_hostname}}:5984'
+couchdb_replication_endpoint : '{{couchdb_endpoint}}/_replicate'
+

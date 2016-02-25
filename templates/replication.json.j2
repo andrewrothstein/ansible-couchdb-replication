@@ -1,7 +1,7 @@
 {
     "_id" : "{{item.id}}",
     "source" : "{{item.source}}",
-    "target" : "{{item.target}}",
+    "target" : "{{couchdb_endpoint}}/{{item.target}}",
     "create_target" : true,
     "continuous" : true
 }

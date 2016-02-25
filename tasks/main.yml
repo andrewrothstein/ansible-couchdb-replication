@@ -2,7 +2,7 @@
 - name: setting up replications...
   with_items: couchdb_reps
   uri:
-    url: '{{inventory_hostname}}:5984/_replicate' 
+    url: '{{couchdb_replication_endpoint}}'
     method: POST
     HEADER_Content-Type : "application/json"
     body: "{{lookup('template', 'replication.json.j2')}}"
