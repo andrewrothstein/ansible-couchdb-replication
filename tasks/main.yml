@@ -6,6 +6,7 @@
     method: POST
     HEADER_Content-Type : "application/json"
     body: "{{lookup('template', 'replication.json.j2')}}"
+    body_format: json
     status_code: 200,202
     timeout: 600
     
